@@ -1,0 +1,22 @@
+class Line(object):
+    
+    def __init__(self,coor1,coor2):
+        self.coor1 = (float(coor1[0]),float(coor1[1]))
+        self.coor2 = (float(coor2[0]),float(coor2[1]))
+    
+    def distance(self):
+        #print ((self.coor2[0] - self.coor1[0])**2)
+        #print ((self.coor2[1] - self.coor1[1])**2)
+        #print (((self.coor2[0] - self.coor1[0])**2 + (self.coor2[1] - self.coor1[1])**2))
+        # print (math.sqrt((self.coor2[0] - self.coor1[0])**2 + (self.coor2[1] - self.coor1[1])**2))
+        return( ((self.coor2[0] - self.coor1[0])**2 + (self.coor2[1] - self.coor1[1])**2)**(1.0/2))
+    
+    def slope(self):
+        return ((self.coor2[1]-self.coor1[1])/(self.coor2[0]-self.coor1[0]))
+    
+    def __str__(self):
+        return "Line from %s to %s,slope %s, length %s" %(self.coor1, self.coor2, self.slope(), self.distance())
+l = Line((3,2),(8,10))
+l.distance()
+l.slope()
+print(l)
