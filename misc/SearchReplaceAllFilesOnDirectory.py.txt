@@ -1,0 +1,35 @@
+#too broad
+import os
+
+import sys
+from os import listdir
+from os.path import isfile, join
+from __future__ import print_function
+import fileinput
+import time
+
+myPath = '/home/rczerwin/p2020_BIT_order_sheets'
+outPath = myPath + '/' + str(time.time())
+os.makedirs(outPath)
+onlyFiles = [f for f in listdir(mypath) if isfile(join(myPath, f))]
+cnt = 0
+replaceThis = input('Search for:')
+replaceWithThis = input('Replace with:')
+for thisFileName in onlyFiles:
+    #print('file: ' + thisFileName)
+    thisFile = open(myPath + '/' + thisFileName, "r")
+    outFile = open(outPath + '/' + thisFileName, "w+")
+    lines = thisFile.readlines()
+    newLines = []
+    for line in lines:
+        #newLine = line.replace('riority>120','riority>46')
+        newLine = line.replace(replaceThis, replaceWithThis)
+        #print(':' + newLine)
+        newLines = newLines + [newLine]
+        #print(len(newlines))
+    outFile.writelines(newLines)
+    outFile.close
+    cnt = cnt + 1
+    #print ("# lines in: " + str(len(lines)) + " # lines out: " + str(len(newLines)))
+print('Done - ' + str(cnt) + ' files written to ' + outPath)
+print('       replaced "' + replaceThis + '" with "' + replaceWithThis + '"')
