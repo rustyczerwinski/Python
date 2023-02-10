@@ -1,0 +1,12 @@
+plan-update-jira.py
+
+read input CSV file as plan (plan-matrix.py), optionally including Sprint name
+(,person1, person2...<cr>epic,person1 hrs,person2 hrs....<cr>epic,person1 hrs, person2 hrs....)
+store as [epic, [user: time, user2: time]]
+
+read jira plan for each epic
+compare to plan from CSV and update Jira as needed (staffing Subtasks, Epic total estimate, Epic assign to Sprint)
+
+report epics updated, epics already correct
+report other Epics in associated projects and not included in CSV plan
+

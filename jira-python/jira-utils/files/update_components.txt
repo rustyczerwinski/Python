@@ -1,0 +1,21 @@
+TESTLIB:ads_virt_prog	Archive
+TESTLIB:appdm_infra <WAFL Infra>	Archive
+TESTLIB:fo_perf <OPE>	Archive
+TESTLIB:gxboot_dev <WAFL>	Archive
+TESTLIB:gxboot_test <WAFL>	Archive
+TESTLIB:init_project	Archive
+TESTLIB:mcc-qa <WAFL>	Archive
+TESTLIB:mhost_message_service <CSI>	Archive
+TESTLIB:nblade_nfsv4 <NFS>	Archive
+TESTLIB:object_server <WAFL>	Archive
+TESTLIB:perf_qa	Archive
+TESTLIB:quark_controller <WAFL Infra>	Archive
+TESTLIB:san <SAN>	Archive
+TESTLIB:security <WAFL>	Archive
+TESTLIB:ste <WAFL>	Archive
+TESTLIB:ste_cvo <WAFL>	Archive
+TESTLIB:ste_quark <WAFL>	Archive
+TESTLIB:vsa_cloud <WAFL>	Archive
+TESTLIB:wafl_fit	Archive
+TESTLIB:wafl_fit <WAFL>	Archive
+TESTLIB:wafl_quota <WAFL>	Archive
